@@ -1,0 +1,20 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large merged weights (exceeds GitHub's 100MB limit)
+outputs/qwen_merged_model/*.safetensors
+outputs/**/checkpoint-*/
+
+# Keep the lightweight LoRA adapter (4.2 MB)
+!outputs/qwen_lora_adapter/adapter_model.safetensors
+
+# Logs and temporary files
+*.log
+.DS_Store
